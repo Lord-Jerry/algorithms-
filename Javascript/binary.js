@@ -28,12 +28,14 @@ const binary = (arr, item) => {
     temp = arr.slice(0, middle);
   }
 
-  //recursesively call itself with a new array ``temp``
+  //recursively call itself with a new array ``temp``
   return binary(temp, item);
 }
-
+// tests
 let count = 0;
 let arr1 = [];
 let temp =0;
 while (arr1.length < 24763543) {temp++; arr1.push(temp);}
-console.log(binary(arr1, 678964),count);
+console.time('search');
+console.log(`${binary(arr1, 678964)} in ${count} steps`);
+console.timeEnd('search');
