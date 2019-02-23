@@ -8,7 +8,10 @@ fn main() {
     println!("{}",binary_search(arr,7588));
 }
 
-fn binary_search(arr: Vec<usize>, item: usize) -> &'static str {
+//recieves a vector of sorted integers and also an integer, 
+//then searches for the integer in the vector
+fn binary_search(arr: Vec<usize>, item: usize) -> &'static str  {/****/
+    //index of integer in the middle of the vector
     let middle: usize = arr.len() / 2;
     let mut temp = vec![];
 
